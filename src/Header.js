@@ -2,6 +2,10 @@ import React from 'react'
 import './Header.css'
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import SearchIcon from '@mui/icons-material/Search';
+import { Turn as Hamburger } from 'hamburger-react'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
 
 const Header = () => {
   return (
@@ -9,13 +13,29 @@ const Header = () => {
          {/*--header logo start-- */}
       <div className="header-logo">
         <ShoppingBagIcon className="header-logoicon" fontSize="large"/>
-          <h2 className='logo-title'>E-commerce E-shop</h2>
+          <h2 className='logo-title'>E-commerce <br /> E-shop</h2>
       </div>
       {/*--header logo end-- */}
 
       {/*--header search start-- */}
       <div className="header-search">
+
+        {/* --Searhcbar dropdown start--*/}
+        <div className="search-select">
+            <p>Kategóriák</p>
+            <ArrowDropDownIcon id="arrow"/>
+
+            <ul>
+                <li>Összes kategória</li>
+                <li>Elektronika</li>
+                <li>Sport</li>
+                <li>Játékok</li>
+            </ul>
+
+        </div>
+        {/* --Searhcbar dropdown end--*/}
         <input className="search-input" type="text" />
+        <SearchIcon className="search-icon" fontSize="large"/>
       </div>
       {/*--header search end-- */}
 
